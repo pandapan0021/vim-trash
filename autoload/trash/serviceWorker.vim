@@ -5,7 +5,9 @@ let register_ = ["if('serviceWorker' in navigator) {",
 			\"    });",
 			\"}"]
 
-function trash#serviceWorker#register() abort
+function! trash#serviceWorker#register() abort
 	let l:lnum = line('.')
-	append(l:lnum, register_)
-endfun
+	call append(l:lnum, register_)
+endfunction
+
+

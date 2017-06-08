@@ -9,11 +9,11 @@ let s:WIN_MANIFEST_HEAD=["<meta name='msapplication-TileImage' content=' '>",
 			\"<meta name='msapplication-TileColor' content=' '>"]
 let s:WIN_MANIFEST_HEAD_COMMENT='<!-- Windows manifest head -->'
 
-function trash#manifest#insert() abort
+function! trash#manifest#insert() abort
 	call trash#utils#copy_from_assert('manifest')
 endfun
 
-function trash#manifest#insert_head_to_html() abort
+function! trash#manifest#insert_head_to_html() abort
 	let head_ = [s:ANDROID_MANIFEST_HEAD_COMMENT, '', s:ANDROID_MANIFEST_HEAD, '', '',
 				\s:IOS_MANIFEST_HEAD_COMMENT, '', s:IOS_MANIFEST_HEAD, '', '',
 				\s:WIN_MANIFEST_HEAD_COMMENT, '', s:WIN_MANIFEST_HEAD, '', '']
